@@ -1,0 +1,13 @@
+<aura:component controller="AccountPaymentsCtl">
+    <aura:attribute name="accountPayment" type="Object" default="" required="false"/>
+
+    <aura:registerEvent name="AccountPaymentVoidCompleteEvt" type="c:AccountPaymentVoidCompleteEvt"/>
+
+    <tr>
+        <td>{! v.accountPayment.accountName }</td>
+        <td>{! v.accountPayment.numberOfPayments }</td>
+        <td>
+            <lightning:button variant="brand" label="Void" title="Void" onclick="{! c.handleVoid }"/>
+        </td>
+    </tr>
+</aura:component>	
